@@ -90,20 +90,6 @@ criptjs.genKey(30, "numbers", (err, result) => {
 // result: "564281673592645812365987546825"
 ```
 
-_To decrypt a code use: `criptjs.decrypt(text, callback);`_
-
-```javascript
-const myCode = "µÞ×ÔÄè×É";
-
-criptjs.setKey("my key");
-
-criptjs.decrypt(myCode, (err, result) => {
-    if (err) throw err;
-    console.log(result);
-});
-// result: "Hello World!"
-```
-
 #### You can also do this with `criptjs.genKey(length, "letters", callback)`
 
 ```javascript
@@ -139,6 +125,20 @@ criptjs.encrypt("Hello World!", (err, result) => {
     console.log(result);
 });
 // result: "µÞ×ÔÄè×É"
+```
+
+_To decrypt a code use: `criptjs.decrypt(text, callback);`_
+
+```javascript
+const myCode = "µÞ×ÔÄè×É";
+
+criptjs.setKey("my key");
+
+criptjs.decrypt(myCode, (err, result) => {
+    if (err) throw err;
+    console.log(result);
+});
+// result: "Hello World!"
 ```
 
 > ***Note***: We recommend that you use very specific keys that only you know, do not share it with anyone. your data is safe, it will only be revealed if you use the right key! 
