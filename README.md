@@ -11,7 +11,7 @@ Now CriptJS is available for FrontEnd, its usability is very simple and very sim
 ## Installation
 
 ```javascript
-<script src="https://cdn.jsdelivr.net/gh/DablioZe/apicriptjs/cript.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/DablioZe/apicriptjs@1.1.3/cript.min.js"></script>
 ```
 
 ## How to use
