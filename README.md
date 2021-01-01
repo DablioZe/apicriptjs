@@ -90,6 +90,20 @@ criptjs.genKey(30, "numbers", (err, result) => {
 // result: "564281673592645812365987546825"
 ```
 
+_To decrypt a code use: `criptjs.decrypt(text, callback);`_
+
+```javascript
+const myCode = "µÞ×ÔÄè×É";
+
+criptjs.setKey("my key");
+
+criptjs.decrypt(myCode, (err, result) => {
+    if (err) throw err;
+    console.log(result);
+});
+// result: "Hello World!"
+```
+
 #### You can also do this with `criptjs.genKey(length, "letters", callback)`
 
 ```javascript
@@ -103,7 +117,29 @@ criptjs.genKey(30, "letters", (err, result) => {
 // result: "BgsacHGdtAdSemNjkLdfTtYsdCiopS"
 ```
 
-<h2 id="FrontEnd">FrontEnd</h2>
+<h1 id="FrontEnd">FrontEnd - API CriptJS</h1>
+
+Now CriptJS is available for FrontEnd, its usability is very simple and very similar to BackEnd. Check it out below.
+
+## Installation
+
+```javascript
+<script src="https://cdn.jsdelivr.net/gh/DablioZe/apicriptjs/cript.min.js"></script>
+```
+
+## How to use
+
+_To encrypt a text use: `criptjs.encrypt(text, callback);`_
+
+```javascript
+criptjs.setKey("my key");
+
+criptjs.encrypt("Hello World!", (err, result) => {
+    if (err) throw err;
+    console.log(result);
+});
+// result: "µÞ×ÔÄè×É"
+```
 
 > ***Note***: We recommend that you use very specific keys that only you know, do not share it with anyone. your data is safe, it will only be revealed if you use the right key! 
 
